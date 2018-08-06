@@ -1,6 +1,7 @@
 .reviewTextArea{
-    width: 40vw;
+    width: 39vw;
     height: 20vh;
+    padding: 0.4vw !important;
 }
 
 .reviewForm{
