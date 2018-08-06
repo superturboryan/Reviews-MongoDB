@@ -25,8 +25,8 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Link to={this.state.redirect?"/":"/reviews"}>
-            <button onClick={this.handleClick}>
-                {this.state.redirect ? "Hide" : "Show"} Reviews
+            <button className='showButton' onClick={this.handleClick}>
+                Click Here to {this.state.redirect ? "Hide" : "Show"} Reviews
             </button>
             </Link>
             <div className="container">

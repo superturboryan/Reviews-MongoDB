@@ -116,7 +116,7 @@ class InputForm extends Component {
             className="reviewTextArea"
             value={this.state.reviewInput}
           />
-          <input type="submit" style={{ width: "40vw" }} />
+          <input type="submit" className="submitButton"/>
         </form>
       </div>
     );

@@ -28,7 +28,20 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.showButton{
+  text-align: left;
+  width: 20vw;
+  padding-top: 1vh;
+  padding-bottom:1vh;
+  background-color: black;  
+  border-style: none;
+  border-radius: 0px 0px 10px 0px;
+  color:white;
+  font-size: 20pt;
+  font-weight: bold;
+      font-family: 'Playfair Display', serif;
+}
+
+body{
+  background-color: whitesmoke;
 }
