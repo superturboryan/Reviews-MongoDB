@@ -1,0 +1,18 @@
+.reviewTextArea{
+    width: 40vw;
+    height: 20vh;
+}
+
+.reviewForm{
+    display:flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+
+.usernameInput{
+    width:20vw;
+}
+
+.radioRow{
+    flex-flow: row;
+}
