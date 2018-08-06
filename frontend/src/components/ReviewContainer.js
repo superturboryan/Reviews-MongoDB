@@ -8,6 +8,17 @@ class ReviewContainer extends Component {
       reviews: null
     };
   }
+  componentDidMount=()=>{
+      fetch('/getReviews')
+      .then(response=>response.text())
+      .then(response=>{
+          let parsedResponse = JSON.parse(response);
+          if(parsedResponse.status){
+              this.setState({reviews: parsedResponse.reviews})
+          }  
+      })
+      .catch(err=>console.log(err))
+  }
   renderReviews = (review, index) => {
     return (<Review
     username={review.username}
@@ -16,7 +27,7 @@ class ReviewContainer extends Component {
     />)
   };
   render() {
-    return <div>{this.state.reviews?this.reviews.map(this.renderReviews):'no reviews yet'}</div>;
+    return <div className="reviewContainer">{this.state.reviews?this.reviews.map(this.renderReviews):'no reviews yet'}</div>;
   }
 }
 

@@ -4,14 +4,16 @@ import './css/Review.css';
 class Review extends Component{
     render(){
         return (
-            <div>
+            <div className="reviewCard">
                 <section className="reviewHeader">
-                <span>{this.props.username}</span>
-                <span>{this.props.rating}</span>
+                <span className="username">{this.props.username}</span>
+                <span className="rating">{this.props.rating}</span>
                 </section>
-                <span>
+                <section className="reviewBody">
+                <span className="review">
                     {this.props.review}
                 </span>
+                </section>
             </div>
         )
     }
