@@ -58,3 +58,17 @@
     from {transform: translateX(-500%)}
     to {transform: translateX(0%)}
 }
+
+@media only screen and (max-width: 600px){
+  .reviewTextArea{
+    width: 75vw;
+    
+}
+    .submitButton{
+        width:76vw;
+    }
+    .usernameInput{
+        width:70vw;
+    }
+
+}

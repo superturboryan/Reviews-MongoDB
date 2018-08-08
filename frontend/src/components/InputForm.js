@@ -32,7 +32,7 @@ class InputForm extends Component {
     let body = { username, review, rating };
     fetch("/postReview", {
       method: "POST",
-      body
+      body: JSON.stringify(body)
     })
       .then(response => response.text())
       .then(response => {
@@ -42,7 +42,7 @@ class InputForm extends Component {
         }
       })
       .catch(err => console.log(err));
-    this.setState({ usernameInput: "", reviewInput: "", ratingInput: null });
+    this.setState({ usernameInput: "", reviewInput: "", ratingInput: '5' });
   };
   render() {
     return (

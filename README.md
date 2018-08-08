@@ -2,8 +2,7 @@
 
 run npm install in both frontend and backend folders
 `cd /frontend && npm start`
-cd into backend folder
-`node server` to start the server
+use the debugger to launch our `backend/server.js` file
 
 the react page has a form where users can submit reviews.
 Right now when we submit a review, nothing happens.
@@ -18,6 +17,7 @@ set the url to your own mongodb
 Fix our endpoints so the POST endpoint will write reviews to your mongo database, 
 and the GET endpoint will read the reviews from the database
 
+```
 app.post('/getADog', (req,res)=>{
     let dog =''
     MongoClient.connect(url, (err,db)=>{
@@ -31,4 +31,5 @@ app.post('/getADog', (req,res)=>{
     })
     res.send(JSON.stringify({dog}))
 })
+```
 

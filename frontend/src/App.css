@@ -5,7 +5,7 @@
 .container{
   margin-left: 30vw;
   margin-right: 30vw;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 .App-logo {
@@ -42,6 +42,79 @@
       font-family: 'Playfair Display', serif;
 }
 
+.nav{
+background-color:rgb(219, 219, 219);
+}
+.navBurger{
+transition: transform 1s ease-in-out;
+}
+
+.twist{
+    animation: twist 0.5s;
+    animation-fill-mode: forwards; 
+}
+
+p{
+  font-family: 'Merriweather', serif;
+}
+
 body{
   background-color: whitesmoke;
 }
+
+button:focus{
+  outline: none;
+  border: none;
+}
+
+
+
+.navContainer{
+  position:relative;
+  width: 400px;
+  transform:translateX(-100%)
+}
+
+
+
+.navSlide{
+  animation: slide 0.2s;
+  animation-fill-mode: forwards;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+a:hover{
+  text-shadow: 1px 1px 1px rgb(182, 182, 182);
+}
+
+@keyframes twist {
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(-90deg)
+  }
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(-100%)
+  }
+  to{
+   transform: translateX(0%)
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+  .container{
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+

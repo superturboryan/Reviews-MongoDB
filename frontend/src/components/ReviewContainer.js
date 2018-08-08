@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Review from './Review.js';
+import './css/ReviewContainer.css'
 
 class ReviewContainer extends Component {
   constructor() {
@@ -27,7 +28,7 @@ class ReviewContainer extends Component {
     />)
   };
   render() {
-    return <div className="reviewContainer">{this.state.reviews?this.reviews.map(this.renderReviews):'no reviews yet'}</div>;
+    return <div className="reviewContainer">{this.state.reviews?this.state.reviews.map(this.renderReviews):'loading reviews'}</div>;
   }
 }
 
