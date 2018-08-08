@@ -14,12 +14,16 @@ class SearchDescription extends Component {
     let newInput = e.target.value;
     this.setState({ searchInput: newInput });
   };
-  handleSubtmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
     let search = this.state.searchInput;
     //write a fetch here to
     //an endpoint that will query
     //your database
+  
+
+    //fetch goes above
+    this.setState({searchInput: ''})
   };
   renderReviews=(review)=>{
       return (<Review

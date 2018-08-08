@@ -3,10 +3,9 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 //PASTE YOUR MLAB URI STRING HERE 
-const url = 'mongodb://admin:password1@ds215172.mlab.com:15172/review-db'
+const url = '';
 
 app.use(bodyParser.raw({type:'*/*'}))
-
 
 //Here we will insert new posts into our database
 //when we send back our response, we can send it
@@ -15,6 +14,7 @@ app.use(bodyParser.raw({type:'*/*'}))
 app.post('/postReview', (req,res)=>{
 let review = JSON.parse(req.body);
 
+
 })
 
 //Here will get all reviews to display them on 
@@ -22,7 +22,7 @@ let review = JSON.parse(req.body);
 //an object in this format:
 //{status:true, reviews:[array of reviews]}
 app.get('/getReviews', (req, res)=>{
-  
+
 })
 
 
