@@ -21,7 +21,7 @@ and the GET endpoint will read the reviews from the database
 
 ### Reference Sheet
 
-[click this link for Reference Sheet]()
+[click this link for Reference Sheet](https://docs.google.com/document/d/1xvNl04byze01vNRmOZ5jdOvbilYkZuwvSszcuT5dtgY/edit?usp=sharing)
 
 ### Example of what our endpoints could look like
 
