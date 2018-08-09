@@ -15,9 +15,9 @@ class InputForm extends Component {
     this.setState({ usernameInput });
   };
   handleRadioChange = e => {
-      let ratingInput = e.target.value;
-      this.setState({ratingInput})
-  }
+    let ratingInput = e.target.value;
+    this.setState({ ratingInput });
+  };
   handleTextAreaChange = e => {
     let reviewInput = e.target.value;
     this.setState({ reviewInput });
@@ -42,7 +42,7 @@ class InputForm extends Component {
         }
       })
       .catch(err => console.log(err));
-    this.setState({ usernameInput: "", reviewInput: "", ratingInput: '5' });
+    this.setState({ usernameInput: "", reviewInput: "", ratingInput: "5" });
   };
   render() {
     return (
@@ -116,7 +116,7 @@ class InputForm extends Component {
             className="reviewTextArea"
             value={this.state.reviewInput}
           />
-          <input type="submit" className="submitButton"/>
+          <input type="submit" className="submitButton" />
         </form>
       </div>
     );
