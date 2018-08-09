@@ -7,11 +7,14 @@ ul{
 }
 
 li{
-    font-size: 15pt;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 12pt;
     margin-bottom: 10px;
     margin-right:10px;
-    font-weight: bold;
+}
+
+hr{
+  border-color: white;
+
 }
 
 .navLinks{
@@ -21,4 +24,6 @@ li{
   padding: 10px;
   z-index: 9999;
   transition: all 1s;
+  padding-right:30px;
+  filter:drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.192))
 }

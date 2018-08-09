@@ -44,6 +44,7 @@
 
 .nav{
 background-color:rgb(219, 219, 219);
+z-index:10000;
 }
 .navBurger{
 transition: transform 1s ease-in-out;
@@ -72,7 +73,7 @@ button:focus{
 .navContainer{
   position:relative;
   width: 400px;
-  transform:translateX(-100%)
+  transform:translateX(-100%);
 }
 
 
@@ -85,7 +86,7 @@ button:focus{
 a{
   text-decoration: none;
   color: white;
-  font-family: 'Playfair Display', serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 a:hover{
