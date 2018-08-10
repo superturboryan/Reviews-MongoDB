@@ -19,7 +19,9 @@ app.post("/postReview", (req, res) => {
 //the frontend. We are going to respond with
 //an object in this format:
 //{status:true, reviews:[array of reviews]}
-app.get("/getReviews", (req, res) => {});
+app.get("/getReviews", (req, res) => {
+  
+});
 
 app.listen(4000, () => {
   console.log("listening on port 4000");

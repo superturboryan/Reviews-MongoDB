@@ -32,11 +32,12 @@ app.get('/getADog', (req,res)=>{
         var dbo = db.db("dog-data")
         dbo.collection("pups").findOne({}, (err,result)=>{
             if (err) throw err;
-            let dog = result
-            db.close
-            res.send(JSON.stringify({dog}))
+            let dog = result;
+            db.close();
+            res.send(JSON.stringify({dog}));
         })
     }) 
 })
 ```
+
 
