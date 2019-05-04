@@ -27,20 +27,18 @@ app.post("/postReview", (req, res) => {
 
       let mainDatabase = db.db("Ryan-DB")
 
-      let postsCollections = mainDatabase.collection("Posts")
+      let postsCollection = mainDatabase.collection("Posts")
 
-      postsCollections.insertOne(review, (err, results) => {
+      postsCollection.insertOne(review, (err, results) => {
          if (err) throw err;
          console.log("Successfully added Review to Posts collection in Ryan-DB")
          db.close()
 
          res.send(JSON.stringify({ status: true, message: "New review created" }))
+
+
       })
-
-
    })
-
-
 });
 
 //Here will get all reviews to display them on
@@ -48,6 +46,24 @@ app.post("/postReview", (req, res) => {
 //an object in this format:
 //{status:true, reviews:[array of reviews]}
 app.get("/getReviews", (req, res) => {
+
+   MongoClient.connect(url, (err, db) => {
+
+      if (err) throw err;
+
+      let mainDatabase = db.db("Ryan-DB")
+
+      let postsCollection = mainDatabase.collection("Posts")
+
+      postsCollection.find({}).toArray((err, result) => {
+         if (err) throw err;
+         console.log(result)
+
+         db.close()
+         res.send(JSON.stringify({ status: true, reviews: result }))
+      })
+
+   })
 
 });
 
